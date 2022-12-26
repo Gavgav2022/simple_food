@@ -1,0 +1,28 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'global';
+
+.header {
+    height: 159px;
+    &__inner {
+        display: flex;
+        align-items: center;
+    }
+}
+ 
+.menu {
+    &__list {
+        display: flex;
+    }
+}
+.user-nav {
+    justify-self: end;
+    
+}
+
+
+
+
+
+@import 'media';
