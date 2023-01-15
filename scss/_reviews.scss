@@ -1,0 +1,264 @@
+.reviews {
+    &__title {
+        text-align: center;
+        margin-bottom: 45px;
+
+        @include r($m) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__slider-item {
+        display: flex;
+        margin: 0 90px 48px 90px;
+
+        @include r($m) {
+            flex-direction: column;
+            margin: 0 40px;
+        }
+    }
+
+    &__img {
+        max-height: 300px;
+        height: 100%;
+        margin-right: 80px;
+        border-radius: 50%;
+
+        @include r($m) {
+            margin: 0 auto 20px;
+            height: 200px;
+            width: 200px;
+        }
+
+        @include r($s) {
+            height: 100px;
+            width: 100px;
+        }
+
+    }
+
+    &__content {
+        align-self: center;
+
+    }
+
+    & blockquote {
+        max-width: 570px;
+        position: relative;
+        margin-bottom: 30px;
+        @extend %rubik-400-italic;
+
+        @include r($l) {
+            font-size: 18px;
+        }
+
+        @include r($s) {
+            font-size: 16px;
+        }
+
+        &::after {
+            content: '';
+            width: 25px;
+            height: 20px;
+            position: absolute;
+            background-image: url('../images/sprite.svg#decor1');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 92px;
+            left: -40px;
+            top: 0;
+        }
+
+        &::before {
+            content: '';
+            width: 25px;
+            height: 20px;
+            position: absolute;
+            background-image: url('../images/sprite.svg#decor2');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 92px;
+            right: -40px;
+            bottom: 0;
+        }
+    }
+
+    & cite {
+        display: block;
+        @extend %rubik-500;
+        margin-bottom: 15px;
+        line-height: 130%;
+        color: $orange-900;
+    }
+
+    & span {
+        display: block;
+        font-size: 14px;
+        line-height: 130%;
+    }
+
+    .slick-dots {
+        display: none;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+
+        & li {
+            @include r($m) {
+                display: none;
+            }
+            & button {
+                padding: 0;
+                width: 15px;
+                height: 15px;
+                color: transparent;
+                background-color: $gray;
+                border: none;
+                border-radius: 50%;
+                font-size: 0;
+                outline: transparent;
+                transition: box-shadow .3s linear, background-color .3s linear;
+
+                &:focus {
+                    box-shadow: 0px 0px 0px 2px $orange-900;
+                }
+
+                &:hover {
+                    background-color: $orange-200;
+                    box-shadow: 0px 0px 0px 2px rgba(255, 122, 80, 0.7);
+                }
+
+                &:active {
+                    background-color: $orange-400;
+                }
+            }
+
+            &.slick-active {
+                width: 15px;
+                height: 0;
+                border-radius: 50%;
+                transition: box-shadow 3s linear, background-color 3s linear, border-color 3s linear;
+
+                button {
+                    padding: 0;
+                    background-color: $orange-900;
+
+                    &:focus {
+                        box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+                    }
+
+                    &:hover {
+                        background-color: $orange-200;
+                        border-color: $orange-400;
+                    }
+
+                    &:hover::before {
+                        filter: invert(33%) sepia(34%) saturate(538%) hue-rotate(324deg) brightness(105%) contrast(105%);
+                    }
+
+                    &:active {
+                        border-color: transparent;
+                        background-color: $orange-200;
+                    }
+
+                    &:active::before {
+                        filter: invert(45%) sepia(20%) saturate(1530%) hue-rotate(327deg) brightness(102%) contrast(102%);
+                    }
+                }
+            }
+        }
+    }
+
+    .slick-arrow {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        color: transparent;
+
+        @include r($m) {
+            position: absolute;
+            top: 33px;
+            z-index: 2;
+        }
+    }
+
+    .slick-next,
+    .slick-prev {
+        position: absolute;
+        bottom: -5px;
+        right: 50%;
+        width: 40px;
+        height: 40px;
+        border: 3px solid $gray;
+        border-radius: 50%;
+        transition: box-shadow .3s linear, background-color .3s linear, border-color .3s linear;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url('/images/sprite.svg#arrow-l');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 92px;
+            transition: filter .3s linear;
+        }
+
+        &:focus {
+            box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+        }
+
+        &:hover {
+            background-color: $orange-200;
+            border-color: $orange-400;
+        }
+
+        &:hover::before {
+            filter: invert(33%) sepia(34%) saturate(538%) hue-rotate(324deg) brightness(105%) contrast(105%);
+        }
+
+        &:active {
+            border-color: transparent;
+            background-color: $orange-200;
+            ;
+        }
+
+        &:active::before {
+            filter: invert(45%) sepia(20%) saturate(1530%) hue-rotate(327deg) brightness(102%) contrast(102%);
+        }
+    }
+
+    .slick-next {
+        transform: translateX(114px);
+
+        @include r($m) {
+            transform: translateX(190px);
+        }
+
+        @include r($s) {
+            transform: translateX(122px);
+        }
+
+        &::before {
+            background-image: url('/images/sprite.svg#arrow-r');
+        }
+    }
+
+    .slick-prev {
+        transform: translateX(-70px);
+
+        @include r($m) {
+        transform: translateX(-150px);
+        }
+
+        @include r($s) {
+            transform: translateX(-78px);
+            }
+
+        &::before {
+            background-image: url('/images/sprite.svg#arrow-l');
+        }
+    }
+}
+

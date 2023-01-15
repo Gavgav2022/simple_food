@@ -1,0 +1,61 @@
+.app-mobile {
+    &__inner {
+        background-position: right;
+        background-repeat: no-repeat;
+
+        @include r($l) {
+            background-size: 30%;
+        }
+
+        @include r($m) {
+            background-size: 0;
+        }
+
+    }
+
+    &__content {
+        margin-right: 580px;
+        max-width: 540px;
+        padding: 41px 0;
+
+        @include r($l) {
+            margin-right: 300px;
+            padding: 0;
+        }
+        @include r($m) {
+            margin-right: 0;
+            max-width: 100%;
+        }
+    }
+
+    &__ttile {
+        margin-bottom: 45px;
+
+        @include r($s) {
+            margin-bottom: 15px;
+        }
+    }
+
+    & p {
+        margin-bottom: 30px;
+
+        @include r($s) {
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    &__img {
+        transition: transform .3s linear;
+
+        &:hover {
+            transform: scale(105%);
+        }
+    }
+}

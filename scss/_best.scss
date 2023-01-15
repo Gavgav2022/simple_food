@@ -1,0 +1,227 @@
+.best {
+
+    .best-title {
+        margin-bottom: 45px;
+        text-align: center;
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+
+        @include r($l) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            
+        }
+
+        @include r($m) {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 20px;
+            
+        }
+
+        @include r($m) {
+            max-width: 100%;
+            display: block;
+            slick-list {
+                
+            }
+
+            .slick-slider {
+                height: 200px;
+            }
+
+            .slick-dots {
+                display: flex;
+                justify-content: center;
+                gap: 15px;
+                margin-top: 15px;
+        
+                & li {
+                    & button {
+                        padding: 0;
+                        width: 15px;
+                        height: 15px;
+                        color: transparent;
+                        background-color: $gray;
+                        border: none;
+                        border-radius: 50%;
+                        font-size: 0;
+                        outline: transparent;
+                        transition: box-shadow .3s linear, background-color .3s linear;
+        
+                        &:focus {
+                            box-shadow: 0px 0px 0px 2px $orange-900;
+                        }
+        
+                        &:hover {
+                            background-color: $orange-200;
+                            box-shadow: 0px 0px 0px 2px rgba(255, 122, 80, 0.7);
+                        }
+        
+                        &:active {
+                            background-color: $orange-400;
+                        }
+                    }
+        
+                    &.slick-active {
+                        width: 15px;
+                        height: 0;
+                        border-radius: 50%;
+                        transition: box-shadow 3s linear, background-color 3s linear, border-color 3s linear;
+        
+                        button {
+                            padding: 0;
+                            background-color: $orange-900;
+        
+                            &:focus {
+                                box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+                            }
+        
+                            &:hover {
+                                background-color: $orange-200;
+                                border-color: $orange-400;
+                            }
+        
+                            &:hover::before {
+                                filter: invert(33%) sepia(34%) saturate(538%) hue-rotate(324deg) brightness(105%) contrast(105%);
+                            }
+        
+                            &:active {
+                                border-color: transparent;
+                                background-color: $orange-200;
+                            }
+        
+                            &:active::before {
+                                filter: invert(45%) sepia(20%) saturate(1530%) hue-rotate(327deg) brightness(102%) contrast(102%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    .restaurant {
+        max-width: 370px;
+        min-width: 290px;
+        box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        background-color: #fff;
+        overflow: hidden;
+
+        @include r($m) {
+            max-width: 100%;
+            width: 100%;
+        }
+
+        & h3 {
+            display: block;
+            padding: 0 20px;
+            margin-bottom: 20px;
+            @extend %rubik-400;
+            font-size: 24px;
+            line-height: 130%;
+        }
+
+        &__img {
+            min-height: 300px;
+            margin-bottom: 15px;
+            object-fit: cover;
+
+            @include r($m) {
+                max-width: 100%;
+                width: 100%;
+            }
+        }
+
+
+        &__descr {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px 20px;
+        }
+
+        &__descr-time {
+            position: relative;
+            padding-left: 32px;
+            @extend %rubik-300;
+            font-size: 18px;
+            line-height: 30px;
+            opacity: 0.9;
+            text-align: center;
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                background-image: url('/images/sprite.svg#best-time_logo');
+                background-repeat: no-repeat;
+                background-position: -38px 30%;
+                background-size: 97px;
+            }
+        }
+
+        &__img-link {
+            display: block;
+
+            @include r($l) {
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        &__link {
+            position: relative;
+            width: 79px;
+            height: 33px;
+            background-color: $orange-900;
+            border-radius: 20px;
+            transition: background-color .3s linear, box-shadow .3s linear;
+
+            &::before {
+                position: absolute;
+                content: '';
+                width: 100%;
+                height: 100%;
+                background-image: url('../images/sprite.svg#best-arrow');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 73%;
+                transition: background-position .3s linear, filter .3s linear, box-shadow .3s linear;
+            }
+
+            &:focus {
+                background-color: $orange-200;
+                box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+            }
+
+            &:focus::before {
+                filter: invert(39%) sepia(77%) saturate(4100%) hue-rotate(337deg) brightness(103%) contrast(101%);
+            }
+
+            &:hover {
+                background-color: $white;
+                box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+            }
+
+            &:hover::before {
+                filter: invert(39%) sepia(77%) saturate(4100%) hue-rotate(337deg) brightness(103%) contrast(101%);
+                background-position: 150% 50%;
+            }
+
+            &:active {
+                background-color: $orange-200;
+            }
+
+            &:active::before {
+                filter: invert(39%) sepia(77%) saturate(4100%) hue-rotate(337deg) brightness(103%) contrast(101%);
+            }
+        }
+    }
+}

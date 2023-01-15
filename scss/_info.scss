@@ -1,0 +1,97 @@
+.info {
+    &__inner {
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        background-position: 70px 0;
+        background-repeat: no-repeat;
+
+        @include r($l) {
+            background-position: center;
+            background-size: contain;
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(249, 250, 255, 0.85);
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        margin: 58px 70px 58px 550px;
+        max-width: 470px;
+        min-height: 469px;
+        z-index: 1;
+
+        @include r($l) {
+            min-height: 0;
+            max-width: 100%;
+            margin: 0;
+        }
+    }
+
+    & p {
+        opacity: 0.9;
+        margin: 30px 0;
+        display: block;
+        line-height: 150%;
+
+        @include r($s) {
+            font-size: 16px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        min-height: 36px;
+        max-height: 80px;
+        margin-bottom: 30px;
+        overflow: hidden;
+        color: $darkBlue-900;
+        font-size: 24px;
+        padding-left: 64px;
+        background-position: -64px 0;
+        background-repeat: no-repeat;
+        background-size: 162px;
+
+        @include r($l) {
+            margin-bottom: 23px;
+            min-height: 33px;
+            padding-left: 44px;
+            font-size: 22px;
+            background-position: -61px 0;
+            background-size: 150px;
+        }
+
+
+        @include r($s) {
+            font-size: 18px;
+            line-height: 150%;
+        }
+    }
+
+    &__item:not(:last-child) {
+        margin-bottom: 20px;
+
+        @include r($l) {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__more {
+        width: 165px;
+    }
+
+    &__link {
+        @include r($l) {
+            padding: 12px 32px;
+        }
+    }
+}

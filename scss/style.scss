@@ -1,28 +1,13 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
-
-.header {
-    height: 159px;
-    &__inner {
-        display: flex;
-        align-items: center;
-    }
-}
- 
-.menu {
-    &__list {
-        display: flex;
-    }
-}
-.user-nav {
-    justify-self: end;
-    
-}
-
-
-
-
-
-@import 'media';
+@import 'header';
+@import 'order';
+@import 'popular';
+@import 'info';
+@import 'app-mobile';
+@import 'best';
+@import 'reviews';
+@import 'footer';
