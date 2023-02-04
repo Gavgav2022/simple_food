@@ -1,0 +1,304 @@
+<section class="product-list position-section">
+    <div class="container">
+        <div class="product-list__inner">
+            <h2 class="section-title product-list__title">Каталог продуктов</h2>
+            <div class="product-list__sorting">
+                <button class="product-list-filter" type="button">
+                    <span class="product-list-filter__line"></span>
+                    <span class="sr-only">Открыть меню</span>
+                </button>
+                <div class="product-list__select-wrapper">
+                    <select name="select-name" id="select-name" class="product-list__list">
+                        <option value="1" data-sort="order:asc">По названию</option>
+                    </select>
+                </div>
+                <div class="product-list__select-wrapper">
+                    <select name="select-position" id="select-position" class="product-list__list">
+                        <option value="1" data-sort="order:asc">по 12</option>
+                    </select>
+                </div>
+            </div>
+            <div class="product-list__content">
+                <div class="product-list__filters">
+                    <div class="product-list__filter">
+                        <h3>Категории</h3>
+                        <ul class="product-list__filters-list">
+                            <li class="product-list__filters-item">
+                                <button class="product-list__button"
+                                    data-filter=".category-burgers">Бургеры</button>
+                            </li>
+                            <li class="product-list__filters-item">
+                                <button class="product-list__button" data-filter=".category-pizza">Пицца</button>
+                            </li>
+                            <li class="product-list__filters-item">
+                                <button class="product-list__button"
+                                    data-filter=".category-burgers">Сендвичи</button>
+                            </li>
+                            <li class="product-list__filters-item">
+                                <button class="product-list__button" data-filter=".category-burgers">Азиатская
+                                    кухня</button>
+                            </li>
+                            <li class="product-list__filters-item">
+                                <button class="product-list__button" data-filter=".category-pizza">Сеты</button>
+                            </li>
+                            <li class="product-list__filters-item">
+                                <button class="product-list__button" data-filter=".a">Европейская кухня</button>
+                            </li>
+                            <li class="product-list__filters-item">
+                                <button class="product-list__button"
+                                    data-filter=".category-burgers">Напитки</button>
+                            </li>
+                            <li class="product-list__filters-item">
+                                <button class="product-list__button"
+                                    data-filter=".category-burgers">Алкоголь</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="product-list__filter">
+                        <h3>Предложения</h3>
+                        <ul class="product-list__filters-list">
+                            <li class="product-list__filters-item">
+                                <label for="product-checkbox-1">
+                                    <input class="product-list__checkbox" id="product-checkbox-1"
+                                        name="product-checkbox-1" type="checkbox">
+                                    <span class="product-list__checkmod"></span>
+                                    Со скидкой
+                                </label>
+                            </li>
+                            <li class="product-list__filters-item">
+                                <label for="product-checkbox-2">
+                                    <input class="product-list__checkbox" id="product-checkbox-2"
+                                        name="product-checkbox-2" type="checkbox" checked>
+                                    <span class="product-list__checkmod"></span>
+                                    Новинка
+                                </label>
+                            </li>
+                            <li class="product-list__filters-item">
+                                <label for="product-checkbox-3">
+                                    <input class="product-list__checkbox" id="product-checkbox-3"
+                                        name="product-checkbox-3" type="checkbox">
+                                    <span class="product-list__checkmod"></span>
+                                    Хит
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="product-list__filter">
+                        <h3>Цена</h3>
+                        <div class="price-filter">
+                            <form class="price-filter__form" action="#">
+                                <div class="price-filter__fields">
+                                    <label for="field--from">от
+                                        <input class="price-filter__field price-filter__field--from" name="field--from" id="field--from" type="text"
+                                            value="0" />₴
+                                    </label>
+                                    <label for="field--to">до
+                                        <input class="price-filter__field price-filter__field--to" name="field--to" id="field--to" type="text"
+                                            value="0" />₴
+                                    </label>
+                                </div>
+                                <div class="price-filter__item">
+                                    <input type="text" class="price-filter__slider" value="0" />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-list__goods-wrapper">
+                    <div class="product-list__goods">
+                        <div class="goods mix category-burgers" data-order="1">
+                            <article class="good">
+                                <a class="good__link" href="good.html">
+                                    <img src="/images/popular/chiz1.jpg" width="140" height="140" alt="фото товара"
+                                        class="good__img">
+                                </a>
+                                <h3>Чизбургер с листьями салата</h3>
+                                <div class="good__price">
+                                    <span>160</span> <span>грн.</span>
+                                </div>
+                                <button class="good__button-curt">В корзину</button>
+                            </article>
+                        </div>
+                        <div class="goods mix category-burgers category-pizza" data-order="2">
+                            <article class="good">
+                                <a class="good__link" href="good.html">
+                                    <img src="/images/popular/chiz2.jpg" width="140" height="140" alt="фото товара"
+                                        class="good__img">
+                                </a>
+                                <h3>Бифбургер</h3>
+                                <div class="good__price">
+                                    <span>190</span> <span>грн.</span>
+                                </div>
+                                <button class="good__button-curt">В корзину</button>
+                            </article>
+                        </div>
+                        <div class="goods mix category-burgers" data-order="1">
+                            <article class="good">
+                                <a class="good__link" href="#">
+                                    <img src="/images/popular/chiz3.jpg" width="140" height="140" alt="фото товара"
+                                        class="good__img">
+                                </a>
+                                <h3>Королевский чизбургер</h3>
+                                <div class="good__price">
+                                    <span>260</span> <span>грн.</span>
+                                </div>
+                                <button class="good__button-curt">В корзину</button>
+                            </article>
+                        </div>
+                        <div class="goods mix category-burgers category-sendwich category-pizza hit" data-order="3">
+                            <article class="good">
+                                <a class="good__link" href="#">
+                                    <img src="/images/popular/chiz4.jpg" width="140" height="140" alt="фото товара"
+                                        class="good__img">
+                                </a>
+                                <h3>Черный гамбургер</h3>
+                                <div class="good__price">
+                                    <span>199</span> <span>грн.</span>
+                                </div>
+                                <button class="good__button-curt">В корзину</button>
+                            </article>
+                        </div>
+                        <div class="goods mix category-burgers" data-order="3">
+                            <article class="good">
+                                <a class="good__link" href="#">
+                                    <img src="/images/popular/chiz5.jpg" width="140" height="140" alt="фото товара"
+                                        class="good__img">
+                                </a>
+                                <h3>Чикен бургер</h3>
+                                <div class="good__price">
+                                    <span>180</span> <span>грн.</span>
+                                </div>
+                                <button class="good__button-curt">В корзину</button>
+                            </article>
+                        </div>
+                        <div class="goods mix category-burgers hit" data-order="1">
+                            <article class="good">
+                                <a class="good__link" href="#">
+                                    <img src="/images/popular/chiz1.jpg" width="140" height="140" alt="фото товара"
+                                        class="good__img">
+                                </a>
+                                <h3>Чизбургер с листьями салата</h3>
+                                <div class="good__price">
+                                    <span>160</span> <span>грн.</span>
+                                </div>
+                                <button class="good__button-curt">В корзину</button>
+                            </article>
+                        </div>
+                        <div class="goods mix category-burgers category-pizza new" data-order="2">
+                            <article class="good">
+                                <a class="good__link" href="#">
+                                    <img src="/images/popular/chiz2.jpg" width="140" height="140" alt="фото товара"
+                                        class="good__img">
+                                </a>
+                                <h3>Бифбургер</h3>
+                                <div class="good__price">
+                                    <span>190</span> <span>грн.</span>
+                                </div>
+                                <button class="good__button-curt">В корзину</button>
+                            </article>
+                        </div>
+                        <div class="goods mix category-burgers hit" data-order="1">
+                            <article class="good">
+                                <a class="good__link" href="#">
+                                    <img src="/images/popular/chiz3.jpg" width="140" height="140" alt="фото товара"
+                                        class="good__img">
+                                </a>
+                                <h3>Королевский чизбургер</h3>
+                                <div class="good__price">
+                                    <span>260</span> <span>грн.</span>
+                                </div>
+                                <button class="good__button-curt">В корзину</button>
+                            </article>
+                        </div>
+                        <div class="goods mix category-burgers category-azian sales" data-order="3">
+                            <article class="good">
+                                <a class="good__link" href="#">
+                                    <img src="/images/popular/chiz4.jpg" width="140" height="140" alt="фото товара"
+                                        class="good__img">
+                                </a>
+                                <h3>Черный гамбургер</h3>
+                                <div class="good__price">
+                                    <span>199</span> <span>грн.</span>
+                                </div>
+                                <button class="good__button-curt">В корзину</button>
+                            </article>
+                        </div>
+                        <div class="goods mix category-burgers category-sets sales" data-order="3">
+                            <article class="good">
+                                <a class="good__link" href="#">
+                                    <img src="/images/popular/chiz5.jpg" width="140" height="140" alt="фото товара"
+                                        class="good__img">
+                                </a>
+                                <h3>Чикен бургер</h3>
+                                <div class="good__price">
+                                    <span>180</span> <span>грн.</span>
+                                </div>
+                                <button class="good__button-curt">В корзину</button>
+                            </article>
+                        </div>
+                        <div class="goods mix category-burgers category-sets sales" data-order="3">
+                            <article class="good">
+                                <a class="good__link" href="#">
+                                    <img src="/images/popular/chiz5.jpg" width="140" height="140" alt="фото товара"
+                                        class="good__img">
+                                </a>
+                                <h3>Чикен бургер</h3>
+                                <div class="good__price">
+                                    <span>180</span> <span>грн.</span>
+                                </div>
+                                <button class="good__button-curt">В корзину</button>
+                            </article>
+                        </div>
+                        <div class="goods mix category-burgers category-sets sales" data-order="3">
+                            <article class="good">
+                                <a class="good__link" href="#">
+                                    <img src="/images/popular/chiz5.jpg" width="140" height="140" alt="фото товара"
+                                        class="good__img">
+                                </a>
+                                <h3>Чикен бургер</h3>
+                                <div class="good__price">
+                                    <span>180</span> <span>грн.</span>
+                                </div>
+                                <button class="good__button-curt">В корзину</button>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="pagination">
+                        <ul class="pagination__list">
+                            <li class="pagination__item pagination__item--acent">
+                                <a href="#" class="pagination__link">
+                                </a>
+                            </li>
+                            <li class="pagination__item">
+                                <a href="#"
+                                    class="pagination__link pagination__link--acent pagination__link--count">1
+                                </a>
+                            </li>
+                            <li class="pagination__item">
+                                <a href="#" class="pagination__link pagination__link--count">2
+                                </a>
+                            </li>
+                            <li class="pagination__item">
+                                <span class="pagination__link pagination__link--count">...
+                                </span>
+                            </li>
+                            <li class="pagination__item">
+                                <a href="#" class="pagination__link pagination__link--count">9
+                                </a>
+                            </li>
+                            <li class="pagination__item">
+                                <a href="#" class="pagination__link pagination__link--count">10
+                                </a>
+                            </li>
+                            <li class="pagination__item">
+                                <a href="#" class="pagination__link">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>

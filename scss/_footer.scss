@@ -1,6 +1,10 @@
 .footer {
     position: relative;
 
+    & .logo__img {
+        width: 100%;
+    }
+
     &::before {
         content: '';
         position: absolute;
@@ -156,6 +160,21 @@
     }
 
     &__top-item {
+        transition: color .3s linear, box-shadow .3s linear, text-shadow .3s linear;
+
+        &:focus {
+            outline: solid 1px $orange-900;
+            color: $orange-900;
+        }
+
+        &:hover {
+            color: $orange-900;
+        }
+
+        &:active {
+            color: $orange-900;
+            text-shadow: $darkBlue-900 2px 5px;
+        }
 
         &:not(:last-child) {
             @include r($s) {
